@@ -1,0 +1,104 @@
+.contract-list {
+  padding: 30px;
+  background-color: #f5f7fa; /* Warna latar belakang yang lebih terang */
+  border-radius: 8px;
+  max-width: 6000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contract-list h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Warna teks judul utama */
+}
+
+/* Bagian Kontrak Utama */
+.contract-details-section {
+  margin-bottom: 30px; /* Memberi jarak antara kontrak utama dan kontrak tambahan */
+}
+
+.contract-details-section h2 {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Warna teks sub-judul */
+}
+
+.contract-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contract-list li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #34495e; /* Warna teks item list */
+}
+
+/* Bagian Kontrak Tambahan */
+.additional-contract-section {
+  margin-top: 40px; /* Memberi jarak lebih besar untuk kontrak tambahan */
+}
+
+.additional-contract-section h2 {
+  margin-bottom: 10px;
+  color: #2c3e50; /* Warna teks sub-judul */
+}
+
+.additional-contract-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #34495e; /* Warna label pilihan kontrak */
+}
+
+.additional-contract-section select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bdc3c7; /* Warna border sesuai dengan tema */
+  background-color: #ecf0f1; /* Warna latar belakang dropdown */
+  color: #34495e; /* Warna teks dropdown */
+}
+
+.additional-contract-section select:focus {
+  border-color: #3498db; /* Warna fokus border */
+}
+
+/* Detail tambahan untuk kontrak */
+.additional-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ecf0f1; /* Warna latar belakang detail tambahan */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #2c3e50; /* Warna teks detail kontrak tambahan */
+}
+
+.additional-details h3 {
+  margin-top: 0;
+  color: #2980b9; /* Warna judul detail kontrak */
+}
+
+/* Styling untuk tombol submit */
+.submit-btn {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #3498db; /* Warna tombol submit */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9; /* Warna hover tombol submit */
+}
+
+.submit-btn:disabled {
+  background-color: #bdc3c7; /* Warna tombol disabled */
+  cursor: not-allowed;
+}

@@ -1,0 +1,139 @@
+/* src/components/Program.css */
+.program-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #2c2c2f, #1a1a1d);
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #DC143D;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  border-bottom: 3px solid #DC143D;
+  padding-bottom: 15px;
+}
+
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+
+.program-item {
+  perspective: 1000px;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  border: none;
+}
+
+.program-item:hover {
+  transform: scale(1.05);
+}
+
+.program-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  transform-origin: center; /* Menjaga agar posisi flip tetap di tengah */
+}
+
+.program-item:hover .program-inner {
+  transform: rotateY(180deg);
+}
+
+.program-front,
+.program-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.program-front {
+  background: linear-gradient(135deg, #3b3b3e, #2a2a2d);
+  color: #ffffff;
+}
+
+.program-front h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.program-back {
+  background: linear-gradient(135deg, #DC143D, #a3122d);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.program-back p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Efek hover dengan underline dari tengah */
+.program-back .more-info {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.program-back .more-info::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 50%;
+  background-color: #FFD700;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.program-back .more-info:hover {
+  color: #FFD700; /* Warna teks berubah saat hover */
+}
+
+.program-back .more-info:hover::before {
+  width: 100%; /* Memunculkan underline dari tengah */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .program-item {
+    width: 90%;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-item {
+    width: 100%;
+    height: 240px;
+  }
+}

@@ -1,0 +1,207 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #191970; /* Midnight Blue */
+  color: #FAEBD7; /* Antique White */
+  margin: 0;
+  line-height: 1.7;
+}
+
+.about-us-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #2c2c2f, #1a1a1d);
+  border-radius: 12px;
+  color: #FAEBD7;
+  gap: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Styling */
+section {
+  padding: 50px 30px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+  background: #3b3b3e;
+  color: #FAEBD7;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternating Section Backgrounds */
+.section:nth-child(even) {
+  background: linear-gradient(135deg, #3b3b3e, #2a2a2d);
+}
+
+.section:nth-child(odd) {
+  background: linear-gradient(135deg, #323235, #1d1d20);
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #DC143D; /* Changed to Crimson */
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #DC143D; /* Changed to Crimson */
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #DC143D; /* Changed to Crimson */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* Section Content Styling */
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 8px;
+  margin-top: 5px;
+}
+
+.progress {
+  background-color: #DC143D; /* Changed to Crimson */
+  height: 100%;
+}
+
+/* Achievements Section */
+.achievements-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements-section li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #3b3b3e;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s ease;
+  border-style: inset;
+}
+
+.achievements-section li strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* FAQ Section */
+.faqs-section {
+  background-color: #3b3b3e;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+details {
+  background-color: #3b3b3e;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-style: inset;
+}
+
+details:hover {
+  background-color: #4e4e4e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+summary {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FAEBD7;
+  display: flex;
+  align-items: center;
+}
+
+summary:hover {
+  color: #DC143D; /* Changed to Crimson */
+}
+
+details p {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+details .fa-icon {
+  margin-right: 10px;
+}
+
+details[open] summary {
+  color: #DC143D; /* Changed to Crimson */
+  font-size: 1.5rem;
+}
+
+/* Adding smooth transition on summary toggle */
+details > summary {
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Icon Styling */
+details summary .fa-question-circle {
+  font-size: 1.6rem;
+  margin-right: 15px;
+  color: #DC143D; /* Changed to Crimson */
+  transition: transform 0.3s ease;
+}
+
+details[open] summary .fa-question-circle {
+  transform: rotate(180deg); /* Rotate the icon when open */
+}
+
+details:hover summary .fa-question-circle {
+  transform: scale(1.1);
+}
+
+/* Add fade in effect for elements */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-slide.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

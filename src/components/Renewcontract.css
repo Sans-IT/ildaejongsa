@@ -1,0 +1,80 @@
+.renew-contract {
+  padding: 40px;
+  background-color: #f4f4f4; /* Light gray background for readability */
+  max-width: 5000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.renew-contract h1 {
+  text-align: center;
+  color: #2A2A2A; /* Darker gray for contrast */
+}
+
+.renew-contract p {
+  color: #2A2A2A;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #1A1A1A; /* Very dark color for strong contrast */
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888; /* Adjusted for better visibility */
+  margin-bottom: 20px;
+}
+
+.cost-summary {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #1C3E57; /* Deep blue tone for contrast */
+}
+
+.otp-btn,
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0056B3; /* Bright blue for strong contrast */
+  color: #ffffff; /* White for readability */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.otp-btn:hover,
+.submit-btn:hover {
+  background-color: #003D80; /* Darker shade for hover state */
+}
+
+.otp-verification input {
+  margin-bottom: 10px;
+  color: #333; /* Ensures input text is visible */
+}
+
+.otp-btn:disabled,
+.submit-btn:disabled {
+  background-color: #BBBBBB; /* Soft gray for disabled state */
+  cursor: not-allowed;
+}
+
+/* Mengatur style untuk label dengan checkbox */
+label input[type="checkbox"] {
+  vertical-align: middle; /* Menyelaraskan checkbox dengan teks */
+  margin-right: 10px; /* Memberikan jarak antara checkbox dan teks */
+}
+
+/* Menambahkan styling untuk label checkbox */
+label {
+  display: flex;
+  align-items: center; /* Memastikan checkbox dan teks sejajar secara vertikal */
+  gap: 10px; /* Jarak antar checkbox dan teks */
+}

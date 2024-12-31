@@ -1,0 +1,287 @@
+/* Container utama untuk form sign up */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1d;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Menyembunyikan overflow horizontal */
+}
+
+/* Form */
+.signup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px; /* Diturunkan sedikit lagi */
+}
+
+/* Judul form */
+.signup-form h2 {
+  text-align: center;
+  color: #2b2d42;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Styling untuk input dan select */
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+/* Fokus input dan select */
+.signup-form input:focus,
+.signup-form select:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+/* Label form */
+.signup-form label {
+  font-size: 0.95rem;
+  color: #4a4e69;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* Form section */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Grid untuk form dua kolom */
+.form-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsivitas kolom */
+@media (max-width: 768px) {
+  .form-grid {
+    flex-direction: column;
+  }
+}
+
+/* Default schedule */
+.default-schedule {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d1d1;
+  font-size: 0.9rem;
+}
+
+.default-schedule p {
+  margin: 0 0 8px;
+  color: #2b2d42;
+  font-weight: bold;
+}
+
+.default-schedule ul {
+  list-style: none;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.default-schedule li {
+  color: #4a4e69;
+}
+
+/* Tombol navigasi dan submit */
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.signup-button,
+.next-button,
+.cancel-button {
+  flex: 1;
+  min-width: 100px;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button {
+  background-color: #dc143c;
+  color: #fff;
+  border: none;
+}
+
+.signup-button:hover {
+  background-color: #a80024;
+  transform: translateY(-2px);
+}
+
+.next-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.next-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+}
+
+.cancel-button:hover {
+  background-color: #bbb;
+  transform: translateY(-2px);
+}
+
+.cancel-button:focus {
+  outline: none;
+}
+
+body.no-scroll {
+  overflow: hidden; /* Menonaktifkan scroll */
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional styles for the form inputs (Nama, Email, Nomor Telepon, Keahlian/Bidang) */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form input[type="text"],
+.signup-form select {
+  margin-bottom: 15px; /* Spacing between inputs */
+}
+
+.signup-form select {
+  background-color: #f5f5f5;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  border-color: #dc143c;
+  background-color: #fff;
+  outline: none;
+}
+
+.signup-form label {
+  font-size: 1rem;
+  color: #4a4e69;
+}
+
+/* Styles for radio buttons */
+.radio-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 8px;
+  border-color: transparent;
+  border: none;
+}
+
+.radio-container label {
+  font-size: 1rem;
+  color: #4a4e69;
+  border: transparent;
+}
+
+/* Instruktur form */
+.instructor-form {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.instructor-form.active {
+  display: flex;
+}
+
+/* Styling for the student form to remain unchanged */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Styling untuk input select dalam form instruktur */
+.instructor-form select {
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.instructor-form select:focus {
+  border-color: #dc143c;
+  outline: none;
+  background-color: #fff;
+}
+
+.instructor-form label {
+  font-size: 0.95rem;
+  color: #4a4e69;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* Tambahkan jarak antar elemen dalam form instruktur */
+.instructor-form {
+  gap: 15px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .instructor-form {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,150 @@
+/* General Styles for Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment */
+  background-color: #DC143C; /* Crimson Red */
+  padding: 10px 20px; /* Adjust padding to make it consistent */
+  height: 50px; /* Set a consistent height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #a80024; /* Slightly darker red when scrolled */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Title */
+.navbar-left {
+  color: white;
+  font-size: 1.2rem; /* Font size */
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  padding: 0; /* Remove padding to ensure alignment */
+  margin: 0; /* Remove margin to prevent offset */
+  line-height: 1.5; /* Line-height for vertical alignment */
+}
+
+.navbar-left:hover {
+  color: #FFD700; /* Gold text color on hover */
+}
+
+.navbar-left::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-left:hover::after {
+  width: 100%; /* Expand underline from left to right */
+  left: 0;
+}
+
+.navbar-left:not(:hover)::after {
+  right: 100%; /* Move underline off-screen from right to left */
+  width: 0;
+}
+
+/* Navbar Menu */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 15px; /* Reduce gap between items */
+}
+
+.navbar li {
+  position: relative;
+  padding: 0; /* Remove padding for alignment */
+  margin: 0; /* Remove margin to align items perfectly */
+  cursor: pointer;
+  color: white;
+  font-size: 1rem; /* Font size */
+  line-height: 1.5; /* Consistent line-height */
+  transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar li:hover::after {
+  width: 100%; /* Expand underline from left to right */
+  left: 0;
+}
+
+.navbar li:not(:hover)::after {
+  left: 100%; /* Move underline off-screen from right to left */
+  width: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 1);
+    padding: 15px;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .navbar-left {
+    flex-grow: 1;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 3px 0;
+}

@@ -1,0 +1,90 @@
+.profile-coach-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Menempatkan container di bawah navbar */
+  min-height: 100vh;
+  padding-top: 40px; /* Menambahkan ruang di atas untuk menghindari overlap dengan navbar */
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.profile-container {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  max-width: 7000px;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-header {
+  font-size: 2.5rem; /* Membesarkan ukuran teks header */
+  margin-bottom: 2rem; /* Menambah jarak bawah */
+  color: #333;
+}
+
+/* Foto Profil */
+.profile-pic-section {
+  margin-bottom: 1rem; /* Memperbesar jarak bawah section foto profil */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.profile-pic-wrapper {
+  width: 150px; /* Ukuran sedang untuk foto profil */
+  height: 150px; /* Ukuran sedang untuk foto profil */
+  border-radius: 50%; /* Tetap mempertahankan bentuk lingkaran */
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #dc134d; /* Mempertahankan border */
+  margin-bottom: 1.5rem; /* Menambah jarak bawah */
+}
+
+.profile-pic {
+  width: 100%; /* Menyesuaikan dengan wrapper */
+  height: 100%; /* Menyesuaikan dengan wrapper */
+  object-fit: cover; /* Memastikan gambar tetap proporsional */
+  margin-bottom: 0px;
+}
+
+.upload-label {
+  font-size: 1.1rem; /* Membesarkan ukuran teks tombol */
+  color: #007bff;
+  cursor: pointer;
+}
+
+.profile-pic-input {
+  display: none;
+}
+
+/* Informasi Pribadi */
+.profile-info {
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.8rem; /* Membesarkan ukuran teks judul section */
+  margin-bottom: 1.5rem; /* Menambah jarak bawah */
+  color: #555;
+}
+
+.info-item {
+  font-size: 1.1rem; /* Membesarkan ukuran teks informasi */
+  margin-bottom: 1rem; /* Menambah jarak antar informasi */
+  color: #666;
+}
+
+.info-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}

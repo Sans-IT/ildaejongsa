@@ -1,0 +1,220 @@
+/* Pengaturan Umum */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #191970; /* Midnight Blue sebagai latar belakang */
+  color: #FAEBD7; /* Antique White untuk teks agar kon */
+}
+
+/* Kontainer Umum */
+.about-us-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Styling */
+section {
+  padding: 50px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variasi Background Section */
+.about-section {
+  background-color: #fff;
+}
+
+.history-section {
+  background: linear-gradient(135deg, #5a5ad6, #F7E7CE); /* Midnight Blue to Champagne Gold */
+}
+
+.mission-vision-section {
+  background-color: #FAFAFA;
+}
+
+.founder-section {
+  background-color: #F5F5F5;
+}
+
+.achievements-section {
+  background: linear-gradient(135deg, Gold, #F7E7CE); /* Burgundy to Champagne Gold */
+}
+
+.future-section {
+  background-color: #F5F5F5;
+}
+
+/* Variasi Layout */
+.history-section .section-content,
+.mission-vision-section .section-content,
+.future-section .section-content {
+  flex-direction: row-reverse;
+}
+
+.mission-vision-section .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Styling Section Pencapaian Kami */
+.achievements-section {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.achievements-section h2 {
+  font-size: 2rem;
+  color: #191970; /* Midnight Blue */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.achievements-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.achievement-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-icon {
+  font-size: 2.5rem;
+  color: #DAA520; /* Champagne Gold */
+  margin-bottom: 15px;
+}
+
+.achievement-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #191970; /* Midnight Blue */
+  margin-bottom: 10px;
+}
+
+.achievement-desc {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .achievements-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Judul */
+h1, h2 {
+  color: #191970; /* Midnight Blue */
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.9;
+}
+
+/* Section Content */
+.section-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.section-image {
+  width: 48%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.founder-section .section-image {
+  width: 40%; /* Lebih kecil di bagian Pendiri Kami */
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+.progress {
+  height: 22px;
+  background-color: #DAA520; /* Champagne Gold */
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Hover Effects */
+section:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: scale(1.03);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+  }
+
+  .section-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,118 @@
+.teaching-schedule-container {
+  padding: 2rem;
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-header {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.schedule-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem; /* Mengurangi jarak antar radio button */
+  justify-content: flex-start; /* Menata elemen di sebelah kiri */
+  margin-bottom: 2rem;
+}
+
+.schedule-selection label {
+  font-size: 1.2rem;
+  color: #3498db;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 0.6rem; /* Menurunkan jarak antara label dan radio button */
+}
+
+.schedule-selection input[type="radio"] {
+  margin-right: 0.5rem; /* Mengurangi margin kanan pada radio button */
+  accent-color: #3498db;
+}  
+
+.custom-schedule {
+  margin-top: 1rem;
+  width: 100%;
+  color: #000;
+}
+
+.custom-schedule textarea {
+  width: 100%;
+  height: 150px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.custom-schedule textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.schedule-display {
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.schedule-display h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.schedule-display p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.schedule-selection input[type="radio"]:checked + label {
+  color: #2980b9;
+}
+
+.apply-button {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.apply-button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .schedule-selection {
+    justify-content: flex-start; /* Membuat elemen radio button lebih teratur di layar kecil */
+  }
+  
+  .schedule-selection label {
+    font-size: 1rem; /* Menurunkan ukuran font pada layar kecil untuk ruang yang lebih efisien */
+  }
+
+  .custom-schedule textarea {
+    font-size: 1rem; /* Ukuran font lebih kecil di layar kecil */
+  }
+
+  .schedule-display h3 {
+    font-size: 1.3rem; /* Menyesuaikan ukuran judul jadwal pada layar kecil */
+  }
+}
